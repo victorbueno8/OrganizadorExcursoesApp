@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "885480479435",
+    "firebase_url": "https://organizadorexcursoesapp.firebaseio.com",
+    "project_id": "organizadorexcursoesapp",
+    "storage_bucket": "organizadorexcursoesapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:885480479435:android:396bb69d1fcae8e20dd94e",
+        "android_client_info": {
+          "package_name": "br.edu.ifsp.OrganizadorExcursoesApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "885480479435-2fdj7ol4a6bip3c7d9h4e5f77usl2p0l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBrt48dNatnSPz6vJBknXXvz3RbGpbvVc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "885480479435-2fdj7ol4a6bip3c7d9h4e5f77usl2p0l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
