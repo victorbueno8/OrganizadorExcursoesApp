@@ -28,18 +28,9 @@ namespace OrganizadorExcursoesApp.Services
                 }).ToList();
         }
 
-        public async Task CreateExcursao(int id, string nome, string descricao, string localdestino, string data, string localsaida, string horariosaida)
+        public async Task CreateExcursao(Excursao e)
         {
-            await firebase.Child("Excursoes").PostAsync(new Excursao()
-            {
-                Id = id,
-                Nome = nome,
-                Descricao = descricao,
-                LocalDestino = localdestino,
-                Data = data,
-                LocalSaida = localsaida,
-                HorarioSaida = horariosaida
-            });
+            await firebase.Child("Excursoes").PostAsync(e);
         }
 
         public async Task<Excursao> GetExcursao(int id)
@@ -49,20 +40,11 @@ namespace OrganizadorExcursoesApp.Services
             return allExcursoes.Where(a => a.Id == id).FirstOrDefault();
         }
 
-        public async Task UpdateExcursao(int id, string nome, string descricao, string localdestino, string data, string localsaida, string horariosaida)
+        public async Task UpdateExcursao(Excursao e)
         {
-            var toUpdateExcursao = (await firebase.Child("Excursoes").OnceAsync<Excursao>()).Where(a => a.Object.Id == id).FirstOrDefault();
+            var toUpdateExcursao = (await firebase.Child("Excursoes").OnceAsync<Excursao>()).Where(a => a.Object.Id == e.Id).FirstOrDefault();
 
-            await firebase.Child("Excursoes").Child(toUpdateExcursao.Key).PutAsync(new Excursao()
-            {
-                Id = id,
-                Nome = nome,
-                Descricao = descricao,
-                LocalDestino = localdestino,
-                Data = data,
-                LocalSaida = localsaida,
-                HorarioSaida = horariosaida
-            });
+            await firebase.Child("Excursoes").Child(toUpdateExcursao.Key).PutAsync(e);
         }
 
         public async Task DeleteExcursao(int id)

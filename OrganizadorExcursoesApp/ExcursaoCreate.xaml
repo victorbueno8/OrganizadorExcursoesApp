@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OrganizadorExcursoesApp.ExcursaoCreate"
+             Title="Adicionar Excursão">
+    <ContentPage.Content>
+        <StackLayout Padding="10,20,10,10">
+            <Label Text="Nome" FontSize="Small"/>
+            <Entry Text="{Binding Nome}" />
+            <Label Text="Descrição" FontSize="Small"/>
+            <Entry Text="{Binding Descricao}" />
+            <Label Text="Local de Destino" FontSize="Small"/>
+            <Entry Text="{Binding LocalDestino}" />
+            <Label Text="Data" FontSize="Small"/>
+            <Entry Text="{Binding Data}" />
+            <Label Text="Local de Saída" FontSize="Small"/>
+            <Entry Text="{Binding LocalSaida}" />
+            <Label Text="Horário de Saída" FontSize="Small"/>
+            <Entry Text="{Binding HorarioSaida}" />
+
+            <Button Text="Salvar" FontSize="10" WidthRequest="70" Clicked="OnSave" x:Name="btnSalvar"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
