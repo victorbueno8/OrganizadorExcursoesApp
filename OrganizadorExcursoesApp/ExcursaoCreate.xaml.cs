@@ -23,6 +23,7 @@ namespace OrganizadorExcursoesApp
         private async void OnSave(object sender, EventArgs args)
         {
             Excursao e = BindingContext as Excursao;
+            Console.WriteLine(e);
             await firebaseService.CreateExcursao(e);
             await Navigation.PopAsync();
         }

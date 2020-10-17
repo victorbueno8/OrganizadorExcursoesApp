@@ -47,9 +47,9 @@ namespace OrganizadorExcursoesApp.Services
             await firebase.Child("Excursoes").Child(toUpdateExcursao.Key).PutAsync(e);
         }
 
-        public async Task DeleteExcursao(int id)
+        public async Task DeleteExcursao(Excursao e)
         {
-            var toDeleteExcursao = (await firebase.Child("Excursoes").OnceAsync<Excursao>()).Where(a => a.Object.Id == id).FirstOrDefault();
+            var toDeleteExcursao = (await firebase.Child("Excursoes").OnceAsync<Excursao>()).Where(a => a.Object.Id == e.Id).FirstOrDefault();
 
             await firebase.Child("Excursoes").Child(toDeleteExcursao.Key).DeleteAsync();
         }

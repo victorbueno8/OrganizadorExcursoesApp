@@ -5,6 +5,7 @@
              Title="Editar Excursão">
     <ContentPage.Content>
         <StackLayout Padding="10,20,10,10">
+            <Label Text="Id" FontSize="Small"/>
             <Entry Text="{Binding Id}" />
             <Label Text="Nome" FontSize="Small"/>
             <Entry Text="{Binding Nome}" />
@@ -19,7 +20,8 @@
             <Label Text="Horário de Saída" FontSize="Small"/>
             <Entry Text="{Binding HorarioSaida}" />
 
-            <Button Text="Salvar" FontSize="10" WidthRequest="70" Clicked="OnSave" x:Name="btnSalvar"/>
+            <Button Text="Deletar" BackgroundColor="Red" FontSize="10" WidthRequest="70" Clicked="OnDelete" x:Name="btnDeletar"/>
+            <Button Text="Salvar" BackgroundColor="Blue" FontSize="10" WidthRequest="70" Clicked="OnSave" x:Name="btnSalvar"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

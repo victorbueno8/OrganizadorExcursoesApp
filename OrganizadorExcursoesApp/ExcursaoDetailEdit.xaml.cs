@@ -26,5 +26,12 @@ namespace OrganizadorExcursoesApp
             await firebaseService.UpdateExcursao(e);
             await Navigation.PopAsync();
         }
+
+        private async void OnDelete(object sender, EventArgs args)
+        {
+            Excursao e = BindingContext as Excursao;
+            await firebaseService.DeleteExcursao(e);
+            await Navigation.PopAsync();
+        }
     }
 }

@@ -5,6 +5,8 @@
              Title="Adicionar Excursão">
     <ContentPage.Content>
         <StackLayout Padding="10,20,10,10">
+            <Label Text="Id" FontSize="Small"/>
+            <Entry Text="{Binding Id}" />
             <Label Text="Nome" FontSize="Small"/>
             <Entry Text="{Binding Nome}" />
             <Label Text="Descrição" FontSize="Small"/>
